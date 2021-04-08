@@ -22,7 +22,7 @@ namespace ProductShop
             Console.WriteLine("Do you want to buy something? (yes or no)");
             Selling product = new Selling();
             product.Offer();
-            product.Cheque();
+            product.Conclude();
         }
     }
 }

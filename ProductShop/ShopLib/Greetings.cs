@@ -10,13 +10,12 @@ namespace ShopLib
     {
         public string visitor;
         public Greetings() 
-        {
-            Question(); 
-        } 
-        public void Question() 
-        {
-            Console.WriteLine("Hello visitor, what is your name?");
+        {        
             visitor = Convert.ToString(Console.ReadLine());
+        } 
+
+        public void Greet()
+        {
             Console.WriteLine("Nice to meet you " + visitor + " here is our list of products:");
         }
     }

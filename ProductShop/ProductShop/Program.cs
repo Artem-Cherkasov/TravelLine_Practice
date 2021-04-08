@@ -8,6 +8,7 @@ namespace ProductShop
     {
         static void Main(string[] args)
         {
+            string answer;
             Console.WriteLine("Hello visitor, what is your name?");
             Greetings visitor = new Greetings();
             visitor.Greet();
@@ -20,8 +21,16 @@ namespace ProductShop
             Product meat = new Product(4, "Meat", 45);
             meat.Print();
             Console.WriteLine("Do you want to buy something? (yes or no)");
+            answer = Convert.ToString(Console.ReadLine());
             Selling product = new Selling();
-            product.Offer();
+            while (answer == "yes")
+            {
+                product.Offer();
+                product.Addition();
+                product.Insert();
+                Console.WriteLine("Do you want to continue? (yes or no)");
+                answer = Convert.ToString(Console.ReadLine());
+            } 
             product.Conclude();
         }
     }

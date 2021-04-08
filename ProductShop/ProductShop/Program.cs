@@ -8,12 +8,21 @@ namespace ProductShop
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello visitor, what is your name?");
             Greetings visitor = new Greetings();
-            Product bread = new Product("Bread", 20);
-            Product apple = new Product("Apple", 15);
-            Product tomato = new Product("Tomato", 30);
-            Product meat = new Product("Meat", 45);
-            Selling product = new Selling();            
+            visitor.Greet();
+            Product bread = new Product(1, "Bread", 20);
+            bread.Print();
+            Product apple = new Product(2,"Apple", 15);
+            apple.Print();
+            Product tomato = new Product(3, "Tomato", 30);
+            tomato.Print();
+            Product meat = new Product(4, "Meat", 45);
+            meat.Print();
+            Console.WriteLine("Do you want to buy something? (yes or no)");
+            Selling product = new Selling();
+            product.Offer();
+            product.Cheque();
         }
     }
 }

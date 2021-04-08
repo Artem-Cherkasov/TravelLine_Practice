@@ -9,22 +9,23 @@ namespace ShopLib
     public class Selling
     {
         public double product_num;
-        public double sum = 0;
-        public string cont;
-        public static int count2 = 0;
+        public double sum;
+        public string answer;
+        public static int count2;
         public string[] list = new string[100];
-        public bool selled = false;
+        public bool selled;
         public Selling() 
         {
-            Offer();
-            Cheque();
+            answer = Convert.ToString(Console.ReadLine());
+            sum = 0;
+            count2 = 0;
+            selled = false;
+            product_num = 0;
         }
         public void Offer() 
-        {
-            Console.WriteLine("Do you want to buy something? (yes or no)");
-            cont = Convert.ToString(Console.ReadLine());
-            if (cont == "yes") 
-            {
+        {     
+            if (answer == "yes") 
+            {                
                 selled = true;
                 do
                 {
@@ -57,12 +58,12 @@ namespace ShopLib
                     else
                         Console.WriteLine("There is no such product like: " + product_num);
                     Console.WriteLine("Do you want to continue? (yes/no)");
-                    cont = Convert.ToString(Console.ReadLine());
-                    count2++;
-                } while (cont == "yes");
+                    answer = Convert.ToString(Console.ReadLine());
+                    count2++;              
+                } while (answer == "yes");
             }
         }
-        public void Cheque() 
+        public void Conclude() 
         {
             if (selled == true) 
             {
@@ -75,7 +76,7 @@ namespace ShopLib
                 Console.WriteLine("Have a nice day!");
             }
             else
-                Console.WriteLine("Have a nice day!");
+                Console.WriteLine("Have a nice day!");            
         }
     }
 }

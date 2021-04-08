@@ -4,20 +4,20 @@ namespace ShopLib
 {
     public class Product
     {
+        public int productid;
         public string name;
         public int price;
-        public static int count1 = 0;
 
-        public Product(string _name, int _price)
+
+        public Product(int serialnumber, string product, int cost)
         {
-            name = _name;
-            price = _price;
-            count1++;
-            Print();
+            productid = serialnumber;
+            name = product;
+            price = cost;
         }
         public void Print() 
         {
-            Console.Write(count1 + ") ");
+            Console.Write(productid + ") ");
             Console.WriteLine("Product: " + name);
             Console.WriteLine("Price: " + price);
         }

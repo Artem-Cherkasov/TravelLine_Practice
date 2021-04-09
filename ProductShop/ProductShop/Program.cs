@@ -21,7 +21,7 @@ namespace ProductShop
             Product meat = new Product(4, "Meat", 45);
             meat.Print();
             Console.WriteLine("Do you want to buy something? (yes or no)");
-            answer = Convert.ToString(Console.ReadLine());
+            answer = Console.ReadLine();
             Selling product = new Selling();
             while (answer == "yes")
             {

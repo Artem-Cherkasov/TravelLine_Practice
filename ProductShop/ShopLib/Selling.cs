@@ -8,18 +8,18 @@ namespace ShopLib
 {
     public class Selling
     {
-        public double product_num;
+        public int product_num;
         public string product_name;
         public int cost;
         public double sum;        
-        public static int count2;
+        public static int count;
         public string[] list = new string[100];
         public bool selled;
         public Selling() 
         {
             sum = 0;
             cost = 0;
-            count2 = 0;
+            count = 0;
             selled = false;
             product_num = 0;
         }
@@ -27,7 +27,7 @@ namespace ShopLib
         {
             selled = true;
             Console.WriteLine("Ok, choose the number of product. (1, 2, 3 or 4)");
-            product_num = Convert.ToDouble(Console.ReadLine());
+            product_num = Convert.ToInt32(Console.ReadLine());
             if (product_num == 1)
             {
                 cost = 20;
@@ -64,8 +64,8 @@ namespace ShopLib
             if (selled == true)
             {
                 Console.WriteLine("You bought " + product_name);
-                list[count2] = product_name;
-                count2++;
+                list[count] = product_name;
+                count++;
             }
             else
                 selled = true;
@@ -75,7 +75,7 @@ namespace ShopLib
             if (selled == true) 
             {
                 Console.WriteLine("Thank you for your purchase, here is your cheque:");
-                for (int i = 0; i < count2; i++)
+                for (int i = 0; i < count; i++)
                 {
                     Console.WriteLine(list[i] + ";");
                 }

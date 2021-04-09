@@ -9,9 +9,9 @@ namespace ShopLib
         public int price;
 
 
-        public Product(int serialnumber, string product, int cost)
+        public Product(int number, string product, int cost)
         {
-            productid = serialnumber;
+            productid = number;
             name = product;
             price = cost;
         }

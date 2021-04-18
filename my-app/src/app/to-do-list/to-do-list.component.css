@@ -1,0 +1,14 @@
+.example-full-width {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.addButton {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.active {
+    text-decoration: line-through;
+    color: red;
+}

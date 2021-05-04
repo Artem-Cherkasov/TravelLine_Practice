@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.page
+{
+    width: 1440px;
+    margin: 0px auto;
+}
+
+.page-intro 
+{
+	float: left;
+}
+
+.top-menu 
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.top-menu__logo 
+{
+	margin-top: 44px;
+	margin-left: 120px;
+	margin-right: 80px;
+	width: 99px;
+	height: 29px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+	color: #FDB100;
+}
+
+.top-menu__button 
+{
+	margin-top: 48px;
+	margin-right: 40px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	text-decoration: none;
+	color: #9196A1;
+}
+
+.top-menu__button_registration 
+{
+	position: absolute;
+	width: 60px;
+	height: 22px;
+	right: 350px;
+	top: 48px;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FDB100;
+}
+
+.intro-content__bold 
+{
+	margin-top: 139px;
+	margin-left: 120px;
+	margin-bottom: 16px;
+	width: 688px;
+	height: 176px;
+	font-style: normal;
+	font: bold 72px/88px Montserrat;
+	color: #25292D;
+}
+
+.intro-content__tiny 
+{	
+	width: 566.86px;
+	height: 56px;
+	margin-left: 120px;
+	margin-bottom: 42px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 28px;
+	color: #4A525A;
+}
+
+.intro-content__buttons 
+{
+	display: flex;
+	flex-direction: row;
+	margin-left: 120px;
+}
+
+.yellow-button 
+{
+	display: flex;
+	flex-direction: row;
+	width: 278px;
+	height: 60px;
+	margin-right: 24px;	
+	background: #FDB100;
+	border-radius: 16px;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	color: #FFFFFF;
+}
+
+.yellow-button:hover 
+{
+	display: flex;
+	flex-direction: row;
+	width: 278px;
+	height: 60px;
+	margin-right: 24px;	
+	background: #FFF;
+	border-radius: 16px;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	color: #FDB100;
+	border: 1px solid #FDB100;
+	box-sizing: border-box;
+	border-radius: 16px;
+}
+
+.white-button 
+{
+	width: 216px;
+ 	height: 60px;
+ 	border: 1px solid #FDB100;
+	box-sizing: border-box;
+	border-radius: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	color: #FDB100;
+}
+
+.white-button:hover 
+{
+	width: 216px;
+ 	height: 60px;
+ 	border: 1px solid #FDB100;
+	box-sizing: border-box;
+	border-radius: 16px;
+	background: #FDB100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	color: #FFF;
+}
+
+.page-intro-image 
+{
+	margin-left: 30px;
+}
+
+.page-tagsort
+{
+	clear: both;
+}
+
+.title__bold 
+{
+	margin-top: 109px;
+	margin-left: 120px;
+	margin-bottom: 16px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	line-height: 62px;
+	color: #25292D;
+}
+
+.title__tiny 
+{
+	margin-left: 120px;
+	margin-bottom: 42px;
+	width: 700px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 32px;
+	color: #4A525A;
+}
+
+.sort 
+{
+	display: flex;
+	flex-direction: row; 
+	margin-left: 120px;
+}
+
+.sort__button  
+{
+	width: 278px;
+	height: 271px;
+	background: #FFFFFF;
+	box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+	border: 1px solid black;
+	border-radius: 24px;
+	text-decoration: none;
+	margin-right: 29px;
+}
+
+.button-img 
+{
+	width: 50px;
+	height: 50px;
+	background: #FFEFCC;
+	border-radius: 12px;
+	margin-left: 24px;
+	margin-top: 24px;
+	margin-bottom: 28px;
+}
+
+.button-img__image 
+{
+	margin-top: 13px;
+	margin-left: 14px;
+}
+
+.button-text__bold 
+{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	color: #25292D;
+	margin-left: 23px;
+	margin-bottom: 16px;
+}
+
+.button-text__tiny 
+{
+	width: 230px;
+	margin-left: 23px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 30px;
+	color: #4A525A;
+}
+
+.daily-recipe 
+{
+	display: flex;
+	flex-direction: row;
+	width: 1129px;
+	margin-left: 120px;
+	margin-top: 157px;
+}
+
+.daily-recipe__image 
+{
+	margin-right: 72px;
+}
+
+.description-logo 
+{
+	margin-top: 27px;
+}
+
+.description-logo__top
+{
+	position: absolute;
+	left: 957px;
+	top: 1580px;
+}
+
+.description-logo__bottom_back
+{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	left: 968px;
+	top: 1594.5px;
+}
+
+.description-logo__bottom_front
+{
+	position: absolute;
+	left: 983px;
+	top: 1609px;
+}
+
+.description-content__bold 
+{
+	margin-top: 180px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	line-height: 60px;
+	text-transform: capitalize;
+	color: #25292D;
+}
+
+.description-content__tiny
+{
+	margin-top: 16px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 32px;
+	font-feature-settings: 'case' on;
+	color: #4A525A;
+}
+
+.recipe-search 
+{
+	clear: both;
+	margin-top: 153px;
+}
+
+.recipe-search__title_bold 
+{
+	margin-bottom: 16px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	line-height: 51px;
+	text-align: center;
+	color: #25292D;
+}
+
+.recipe-search__title_tiny 
+{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 32px;
+	text-align: center;
+	color: #4A525A;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

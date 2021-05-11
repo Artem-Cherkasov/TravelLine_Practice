@@ -7,13 +7,15 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { RouterModule } from '@angular/router';
 import { RecipelistComponent } from './recipelist/recipelist.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { RecipeComponent } from './recipe/recipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainpageComponent,
     RecipelistComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    RecipeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
       { path: 'main', component: MainpageComponent },
       { path: 'list', component: RecipelistComponent },
       { path: 'favs', component: FavoritesComponent },
+      { path: 'recipe', component: RecipeComponent },
     ])
   ],
   exports: [ RouterModule],

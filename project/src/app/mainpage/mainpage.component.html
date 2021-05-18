@@ -23,42 +23,15 @@
         <div class="title__tiny">Добавляй рецепты и указывай наиболее популярные теги. Это позволит быстро находить любые категории.</div>
       </div>
       <div class="sort">
-        <a href="" class="sort__button">
+        <a *ngFor="let tag of Tags" href="" class="sort__button">
           <div class="button-img">              
-            <img src="assets/Images/Book.png" alt="Book" width="22" height="24" class="button-img__image">
+            <img src="{{tag.icon}}" alt="Book" width="22" height="24" class="button-img__image">
           </div>
           <div class="button-text">
-            <div class="button-text__bold">Простые блюда</div>
-            <div class="button-text__tiny">Время приготвления таких блюд не более 1 часа</div>
+            <div class="button-text__bold">{{tag.name}}</div>
+            <div class="button-text__tiny">{{tag.description}}</div>
           </div>
         </a>
-        <a href="" class="sort__button">
-          <div class="button-img">              
-            <img src="assets/Images/Vector.png" alt="Book" width="24" height="24" class="button-img__image">
-          </div>
-          <div class="button-text">
-            <div class="button-text__bold">Детское</div>
-            <div class="button-text__tiny">Самые полезные блюда которые можно детям любого возраста</div>
-          </div>
-        </a>
-        <a href="" class="sort__button">
-          <div class="button-img">              
-            <img src="assets/Images/Chief.png" alt="Book" width="24" height="20" class="button-img__image">
-          </div>
-          <div class="button-text">
-            <div class="button-text__bold">От шеф-поваров</div>
-            <div class="button-text__tiny">Требуют умения, времени и терпения, зато как в ресторане</div>
-          </div>
-        </a>
-        <a href="" class="sort__button">
-          <div class="button-img">              
-            <img src="assets/Images/Holiday.png" alt="Book" width="24" height="23" class="button-img__image">
-          </div>
-          <div class="button-text">
-            <div class="button-text__bold">На Праздник</div>
-            <div class="button-text__tiny">Чем удивить гостей, чтобы все были сыты за праздничным столом</div>
-          </div>
-        </a>          
       </div>
     </div>
     <div class="daily-recipe">

@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { RecipelistComponent } from './recipelist/recipelist.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { RecipeComponent } from './recipe/recipe.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,14 @@ import { RecipeComponent } from './recipe/recipe.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: '', component: MainpageComponent },
       { path: 'main', component: MainpageComponent },
       { path: 'list', component: RecipelistComponent },
       { path: 'favs', component: FavoritesComponent },
       { path: 'recipe', component: RecipeComponent },
+      { path: 'list/:searchString', component: RecipelistComponent }
     ])
   ],
   exports: [ RouterModule],

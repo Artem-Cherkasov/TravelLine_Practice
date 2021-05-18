@@ -13,81 +13,48 @@
       </div>
       <div class="tag-buttons">
         <div class="sort">
-          <a href="" class="sort__button">
+          <a *ngFor="let tag of Tags" href="" class="sort__button">
             <div class="button-img">              
-              <img src="assets/Images/Book.png" alt="Book" width="22" height="24" class="button-img__image">
+              <img src="{{tag.icon}}" alt="Book" width="22" height="24" class="button-img__image">
             </div>
             <div class="button-text">
-              <div class="button-text__bold">Простые блюда</div>            
+              <div class="button-text__bold">{{tag.name}}</div>            
             </div>
           </a>
-          <a href="" class="sort__button">
-            <div class="button-img">              
-              <img src="assets/Images/Vector.png" alt="Book" width="24" height="24" class="button-img__image">
-            </div>
-            <div class="button-text">
-              <div class="button-text__bold">Детское</div>
-            </div>
-          </a>
-          <a href="" class="sort__button">
-            <div class="button-img">              
-              <img src="assets/Images/Chief.png" alt="Book" width="24" height="20" class="button-img__image">
-            </div>
-            <div class="button-text">
-              <div class="button-text__bold">От шеф-поваров</div>
-            </div>
-          </a>
-          <a href="" class="sort__button">
-            <div class="button-img">              
-              <img src="assets/Images/Holiday.png" alt="Book" width="24" height="23" class="button-img__image">
-            </div>
-            <div class="button-text">
-              <div class="button-text__bold">На Праздник</div>
-            </div>
-          </a>          
         </div>
       </div>              
     </div>
     <div class="page-search">
       <div class="page-search__title">Поиск рецепта</div>
       <div class="input-field">
-        <div class="input-field__text">Название блюда....</div>
+        <input class="input-field__text" placeholder="Название блюда...." [(ngModel)]="SearchString">
       </div>
       <a href="" class="page-search__button"><p>Поиск</p></a>
     </div>
     <div class="quick-tags">
-      <a href="" class="quick-tags__button">мясо</a>
-      <a href="" class="quick-tags__button">деликатесы</a>
-      <a href="" class="quick-tags__button">пироги</a>
-      <a href="" class="quick-tags__button">рыба</a>
-      <a href="" class="quick-tags__button">пост</a>
-      <a href="" class="quick-tags__button">пасха2021</a>
+      <a *ngFor="let quicktag of QuickTags" href="" class="quick-tags__button">{{quicktag.name}}</a>
     </div>
-    <a routerLink="/recipe" class="recipe">
-      <img src="assets/Images/Strawberry.png" alt="" class="recipe__image">
+    <a *ngFor="let recipe of Recipes" routerLink="/recipe" class="recipe">
+      <img src="{{recipe.image}}" alt="" class="recipe__image">
       <div class="recipe__content">
         <div class="content-buttons">
           <div class="yellow-tags">
-            <a href="" class="tag">десерты</a>
-            <a href="" class="tag">клубника</a>
-            <a href="" class="tag">сливки</a>
+            <a *ngFor="let tag of recipe.tags.slice(0, 3)" href="" class="tag">{{tag.name}}</a>
           </div>
           <div class="fav-buttons">
             <div class="fav-buttons__button">
               <img src="assets/Images/Star.png" alt="" class="fav-buttons__button_img" width="20" height="19">
-              <div class="fav-buttons__button_text">10</div>
+              <div class="fav-buttons__button_text">{{recipe.fav}}</div>
             </div>
             <div class="fav-buttons__button">
               <img src="assets/Images/Heart.png" alt="" class="fav-buttons__button_img" width="20" height="19">
-              <div class="fav-buttons__button_text">8</div>
+              <div class="fav-buttons__button_text">{{recipe.like}}</div>
             </div>
           </div>
         </div>
         <div class="description">
-          <div class="description__bold">Клубничная панна-котта</div>
-          <div class="description__tiny">
-            Десерт, который невероятно легко и быстро готовится. Советую подавать его порционно в красивых бокалах, украсив взбитыми сливками, свежими ягодами и мятой.
-          </div>
+          <div class="description__bold">{{recipe.name}}</div>
+          <div class="description__tiny">{{recipe.description}}</div>
         </div>
         <div class="bottom-content">
           <div class="bottom-content__time-and-person">
@@ -95,158 +62,20 @@
               <img src="assets/Images/Clocks.png" alt="" class="time-img" width="48" height="56">
               <div class="time-and-person_text">
                 <div class="time-and-person__text_bold">Время приготовления:</div>
-                <div class="time-and-person__text_tiny">35 мин</div>
+                <div class="time-and-person__text_tiny">{{recipe.time}}</div>
               </div>
             </div>
             <div class="time-and-person">
               <img src="assets/Images/People.png" alt="" class="person-img" width="59" height="38">
               <div class="time-and-person_text">
                 <div class="time-and-person__text_bold">Рецепт на:</div>
-                <div class="time-and-person__text_tiny">5 персон</div>
+                <div class="time-and-person__text_tiny">{{recipe.person}}</div>
               </div>              
             </div>
           </div>
         </div>
       </div>
     </a>
-    <div class="recipe">
-      <img src="assets/Images/Meat.png" alt="" class="recipe__image">
-      <div class="recipe__content">
-        <div class="content-buttons">
-          <div class="yellow-tags">
-            <a href="" class="tag">вторые блюда</a>
-            <a href="" class="tag">мясо</a>
-            <a href="" class="tag">соевый соус</a>
-          </div>
-          <div class="fav-buttons">
-            <div class="fav-buttons__button">
-              <img src="assets/Images/Star.png" alt="" class="fav-buttons__button_img" width="20" height="19">
-              <div class="fav-buttons__button_text">4</div>
-            </div>
-            <div class="fav-buttons__button">
-              <img src="assets/Images/Heart.png" alt="" class="fav-buttons__button_img" width="20" height="19">
-              <div class="fav-buttons__button_text">7</div>
-            </div>
-          </div>
-        </div>
-        <div class="description">
-          <div class="description__bold">Мясные фрикадельки</div>
-          <div class="description__tiny">
-            Мясные фрикадельки в томатном соусе - несложное и вкусное блюдо, которым можно порадовать своих близких. 
-          </div>
-        </div>
-        <div class="bottom-content">
-          <div class="bottom-content__time-and-person">
-            <div class="time-and-person">
-              <img src="assets/Images/Clocks.png" alt="" class="time-img" width="48" height="56">
-              <div class="time-and-person_text">
-                <div class="time-and-person__text_bold">Время приготовления:</div>
-                <div class="time-and-person__text_tiny">90 мин</div>
-              </div>
-            </div>
-            <div class="time-and-person">
-              <img src="assets/Images/People.png" alt="" class="person-img" width="59" height="38">
-              <div class="time-and-person_text">
-                <div class="time-and-person__text_bold">Рецепт на:</div>
-                <div class="time-and-person__text_tiny">4 персоны</div>
-              </div>              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="recipe">
-      <img src="assets/Images/Pancakes.png" alt="" class="recipe__image">
-      <div class="recipe__content">
-        <div class="content-buttons">
-          <div class="yellow-tags">
-            <a href="" class="tag">десерты</a>
-            <a href="" class="tag">завтрак</a>
-            <a href="" class="tag">блины</a>
-          </div>
-          <div class="fav-buttons">
-            <div class="fav-buttons__button">
-              <img src="assets/Images/Star.png" alt="" class="fav-buttons__button_img" width="20" height="19">
-              <div class="fav-buttons__button_text">25</div>
-            </div>
-            <div class="fav-buttons__button">
-              <img src="assets/Images/Heart.png" alt="" class="fav-buttons__button_img" width="20" height="19">
-              <div class="fav-buttons__button_text">7</div>
-            </div>
-          </div>
-        </div>
-        <div class="description">
-          <div class="description__bold">Панкейки</div>
-          <div class="description__tiny">
-            Панкейки: меньше, чем блины, но больше, чем оладьи. Основное отличие — в тесте, оно должно быть воздушным, чтобы панкейки не растекались по сковородке...
-          </div>
-        </div>
-        <div class="bottom-content">
-          <div class="bottom-content__time-and-person">
-            <div class="time-and-person">
-              <img src="assets/Images/Clocks.png" alt="" class="time-img" width="48" height="56">
-              <div class="time-and-person_text">
-                <div class="time-and-person__text_bold">Время приготовления:</div>
-                <div class="time-and-person__text_tiny">40 мин</div>
-              </div>
-            </div>
-            <div class="time-and-person">
-              <img src="assets/Images/People.png" alt="" class="person-img" width="59" height="38">
-              <div class="time-and-person_text">
-                <div class="time-and-person__text_bold">Рецепт на:</div>
-                <div class="time-and-person__text_tiny">3 персон</div>
-              </div>              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="recipe">
-      <img src="assets/Images/IceCream.png" alt="" class="recipe__image">
-      <div class="recipe__content">
-        <div class="content-buttons">
-          <div class="yellow-tags">
-            <a href="" class="tag">десерты</a>
-            <a href="" class="tag">вишня</a>
-            <a href="" class="tag">мороженое</a>
-          </div>
-          <div class="fav-buttons">
-            <div class="fav-buttons__button">
-              <img src="assets/Images/Star.png" alt="" class="fav-buttons__button_img" width="20" height="19">
-              <div class="fav-buttons__button_text">4</div>
-            </div>
-            <div class="fav-buttons__button">
-              <img src="assets/Images/Heart.png" alt="" class="fav-buttons__button_img" width="20" height="19">
-              <div class="fav-buttons__button_text">7</div>
-            </div>
-          </div>
-        </div>
-        <div class="description">
-          <div class="description__bold">Полезное мороженое без сахара</div>
-          <div class="description__tiny">
-            Йогуртовое мороженое сочетает в себе нежный вкус и низкую калорийность, что будет особенно актуально для сладкоежек, соблюдающих диету.
-          </div>
-        </div>
-        <div class="bottom-content">
-          <div class="bottom-content__time-and-person">
-            <div class="time-and-person">
-              <img src="assets/Images/Clocks.png" alt="" class="time-img" width="48" height="56">
-              <div class="time-and-person_text">
-                <div class="time-and-person__text_bold">Время приготовления:</div>
-                <div class="time-and-person__text_tiny">35 мин</div>
-              </div>
-            </div>
-            <div class="time-and-person">
-              <img src="assets/Images/People.png" alt="" class="person-img" width="59" height="38">
-              <div class="time-and-person_text">
-                <div class="time-and-person__text_bold">Рецепт на:</div>
-                <div class="time-and-person__text_tiny">2 персоны</div>
-              </div>              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="bottom-button"><div class="white-button">Загрузить ещё</div></div>
   </div>
 

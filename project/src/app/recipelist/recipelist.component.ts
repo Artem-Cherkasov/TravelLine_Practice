@@ -3,6 +3,8 @@ import { Tag } from 'src/tag';
 import { TagService } from '../tag.service';
 import { Recipe } from 'src/recipe';
 import { RecipeService } from '../recipe.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-recipelist',
@@ -18,7 +20,12 @@ export class RecipelistComponent implements OnInit {
   SearchString: string = '';
   
 
-  constructor(private tagService: TagService, private recipeService: RecipeService) { }
+  constructor(
+    private tagService: TagService,
+    private recipeService: RecipeService,
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   getTags(): void {
     this.tagService.getTags()

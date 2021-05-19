@@ -56,6 +56,17 @@
         <div class="recipe-search__title_bold">Поиск рецептов</div>
         <div class="recipe-search__title_tiny">Введите примерное название блюда, а мы по тегам найдем его</div>
       </div>
-    </div>    
+    </div>
+    <div class="mainpage-search">
+      <div class="page-search">      
+        <div class="mainpage__inputfield"><input class="input-field" placeholder="Название блюда...." [(ngModel)]="SearchString"></div>
+        <a [routerLink]="['/list', SearchString]" href="" class="page-search__button"><p>Поиск</p></a>
+      </div>
+      <div class="mainpage-quicktags">
+        <div class="quick-tags">
+          <a *ngFor="let quicktag of QuickTags.slice(0, 4)" href="" class="quick-tags__button"><div class="mainpage-quicktag__button">{{quicktag.name}}</div></a>
+        </div>        
+      </div>
+    </div>
   </div>
 

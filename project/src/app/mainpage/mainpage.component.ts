@@ -13,6 +13,7 @@ export class MainpageComponent implements OnInit {
 
   Tags: Tag[] = [];
   QuickTags: Tag[] = [];
+  SearchString: string = '';
 
   constructor(private tagService: TagService) {
    }

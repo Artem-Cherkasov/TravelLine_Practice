@@ -28,7 +28,8 @@ import { FormsModule } from '@angular/forms';
       { path: 'list', component: RecipelistComponent },
       { path: 'favs', component: FavoritesComponent },
       { path: 'recipe', component: RecipeComponent },
-      { path: 'list/:searchString', component: RecipelistComponent }
+      { path: 'list/:searchString', component: RecipelistComponent },
+      { path: 'main/:searchString', component: MainpageComponent }
     ])
   ],
   exports: [ RouterModule],

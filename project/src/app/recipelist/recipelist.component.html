@@ -32,7 +32,7 @@
     <div class="quick-tags">
       <a *ngFor="let quicktag of QuickTags" href="" class="quick-tags__button">{{quicktag.name}}</a>
     </div>
-    <a *ngFor="let recipe of Recipes" routerLink="/recipe" class="recipe">
+    <a *ngFor="let recipe of Recipes" [routerLink]="['/recipe', recipe.id]" class="recipe">
       <img src="{{recipe.image}}" alt="" class="recipe__image">
       <div class="recipe__content">
         <div class="content-buttons">
@@ -74,6 +74,6 @@
         </div>
       </div>
     </a>
-    <div class="bottom-button"><div class="white-button">Загрузить ещё</div></div>
+    <div class="bottom-button"><div class="white-button" (click)="getRecipes()">Загрузить ещё</div></div>
   </div>
 

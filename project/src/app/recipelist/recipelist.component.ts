@@ -38,14 +38,17 @@ export class RecipelistComponent implements OnInit {
   } 
 
   getRecipes(): void {
-    this.recipeService.getRecipes()
-      .subscribe(data => this.Recipes = data);
+    this.recipeService.getRecipes(this.Recipes.length)
+      .subscribe(data => this.Recipes = this.Recipes.concat(data));
   } 
 
   ngOnInit(): void {
     this.getTags();
     this.getQuickTags();
     this.getRecipes();
+    this.route.paramMap.pipe(
+      switchMap((params: ParamMap) => params.getAll('searchString')!)
+    ).subscribe(data => this.SearchString = data);
   }
 
 

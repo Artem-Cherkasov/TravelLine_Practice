@@ -395,6 +395,25 @@
 	margin-right: 25px;
 }
 
+.likes_n_favs 
+{
+	margin-top: 5px;
+	margin-left: 339px;
+	display: flex;
+	flex-direction: row;
+}
+
+.likes-n-favs__button 
+{
+	display: flex;
+	flex-direction: row;
+	margin-right: 20px;
+}
+
+.likes-n-favs__button_img 
+{
+	margin-right: 1px;
+}
 
 
 

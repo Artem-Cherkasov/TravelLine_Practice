@@ -48,4 +48,11 @@ export class RecipeService {
     ]);
   }
 
+  getDailyRecipe(): Observable<Recipe[]> {
+    return of([
+      {id: 1, image: "assets/Images/Dish.png", tags: [], fav: 10, like: 356, name: 'Тыквенный супчик на кокосовом молоке', description: 'Если у вас осталась тыква, и вы не знаете что с ней сделать, то это решение для вас! Ароматный, согревающий суп-пюре на кокосовом молоке. Можно даже в Пост!', time: '35 мин', person: '5 персон', ingridient: [], step: [] },
+    ]);
+  }
+
+
 }

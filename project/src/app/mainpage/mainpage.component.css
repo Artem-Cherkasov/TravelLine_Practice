@@ -13,6 +13,11 @@
     margin: 0px auto;
 }
 
+.head-menu 
+{
+	float: left;
+}
+
 .page-intro 
 {
 	float: left;

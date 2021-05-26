@@ -29,6 +29,7 @@ import { FormsModule } from '@angular/forms';
       { path: 'favs', component: FavoritesComponent },
       { path: 'recipe/:id', component: RecipeComponent },
       { path: 'list/:searchString', component: RecipelistComponent },
+      { path: 'listByTag/:tag', component: RecipelistComponent },
 
     ])
   ],

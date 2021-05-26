@@ -1,12 +1,4 @@
-<div class="page">
     <div class="page-intro">
-      <div class="top-menu">
-        <p class="top-menu__logo">Recipes</p>
-        <a routerLink="/main" class="top-menu__button"><p>Главная</p></a>
-        <a routerLink="/list" class="top-menu__button"><p>Рецепты</p></a>
-        <a routerLink="/favs" class="top-menu__button"><p>Избранное</p></a>
-        <a href="" class="top-menu__button_registration"><p>Войти</p></a>
-      </div>
       <div class="intro-content">
         <div class="intro-content__bold">Готовь и делись рецептами</div>
         <div class="intro-content__tiny">Никаких кулинарных книг и блокнотов! Храни все любимые рецепты в одном месте</div>
@@ -34,17 +26,17 @@
         </a>
       </div>
     </div>
-    <div class="daily-recipe">
-      <img src="assets/Images/Dish.png" alt="" class="daily-recipe__image">
+    <div *ngIf="DailyRecipe" class="daily-recipe">
+      <img src="{{DailyRecipe.image}}" alt="" class="daily-recipe__image">
       <div class="daily-recipe__description">
         <div class="likes_n_favs">
           <div class="likes-n-favs__button">
             <img src="assets/Images/MainHeart.png" alt="" class="likes-n-favs__button_img">
-            <div class="likes-n-favs__button_count">356</div>
+            <div class="likes-n-favs__button_count">{{DailyRecipe.like}}</div>
           </div>
           <div class="likes-n-favs__button">
             <img src="assets/Images/MainClocks.png" alt="" class="likes-n-favs__button_img">
-            <div class="likes-n-favs__button_count">35 минут</div>
+            <div class="likes-n-favs__button_count">{{DailyRecipe.time}}</div>
           </div>
         </div>
         <div class="description-logo">
@@ -53,11 +45,8 @@
           <img src="assets/Images/DailyRecipeLogoBottom.png" alt="" class="description-logo__bottom_front">
         </div>
         <div class="description-content">
-          <div class="description-content__bold">Тыквенный супчик на кокосовом молоке</div>
-          <div class="description-content__tiny">
-            Если у вас осталась тыква, и вы не знаете что с ней сделать, то это решение для вас!
-            Ароматный, согревающий суп-пюре на кокосовом молоке. Можно даже в Пост! 
-          </div>
+          <div class="description-content__bold">{{DailyRecipe.name}}</div>
+          <div class="description-content__tiny">{{DailyRecipe.description}}</div>
         </div>
       </div>
     </div>
@@ -74,9 +63,8 @@
       </div>
       <div class="mainpage-quicktags">
         <div class="quick-tags">
-          <a *ngFor="let quicktag of QuickTags.slice(0, 4)" href="" class="quick-tags__button"><div class="mainpage-quicktag__button">{{quicktag.name}}</div></a>
+          <a *ngFor="let quicktag of QuickTags.slice(0, 4)" [routerLink]="['/list']" href="" class="quick-tags__button"><div (click)="onTagClick(quicktag.name)" class="mainpage-quicktag__button">{{quicktag.name}}</div></a>
         </div>        
       </div>
     </div>
-  </div>
 

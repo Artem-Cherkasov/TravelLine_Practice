@@ -11,6 +11,15 @@ export class RecipeService {
 
   constructor() { }
 
+  getRecipesByTags(tag:string, offsetNumber: number): Observable<Recipe[]> {
+    return of([
+      {id: 1, image: "assets/Images/Strawberry.png", tags: [], fav: 10, like: 8, name: 'Клубничная панна-котта', description: 'Десерт, который невероятно легко и быстро готовится. Советую подавать его порционно в красивых бокалах, украсив взбитыми сливками, свежими ягодами и мятой.', time: '35 мин', person: '5 персон', ingridient: [], step: [] },
+      { id: 2, image: "assets/Images/Meat.png", tags: [], fav: 4, like: 7, name: 'Мясные фрикадельки', description: 'Мясные фрикадельки в томатном соусе - несложное и вкусное блюдо, которым можно порадовать своих близких.', time: '90 мин', person: '4 персоны', ingridient: [], step: [] },
+      /*{ id: 3, image: "assets/Images/Pancakes.png", tags: [], fav: 25, like: 7, name: 'Панкейки', description: 'Панкейки: меньше, чем блины, но больше, чем оладьи. Основное отличие — в тесте, оно должно быть воздушным, чтобы панкейки не растекались по сковородке...', time: '40 мин', person: '3 персоны', ingridient: [], step: [] },
+      { id: 4, image: "assets/Images/IceCream.png", tags: [], fav: 4, like: 7, name: 'Полезное Мороженое Без Сахара', description: 'Йогуртовое мороженое сочетает в себе нежный вкус и низкую калорийность, что будет особенно актуально для сладкоежек, соблюдающих диету.', time: '35 мин', person: '2 персоны', ingridient: [], step: [] },*/
+    ]);
+  }
+
   getRecipes(offsetNumber: number): Observable<Recipe[]> {
     return of([
       {id: 1, image: "assets/Images/Strawberry.png", tags: [], fav: 10, like: 8, name: 'Клубничная панна-котта', description: 'Десерт, который невероятно легко и быстро готовится. Советую подавать его порционно в красивых бокалах, украсив взбитыми сливками, свежими ягодами и мятой.', time: '35 мин', person: '5 персон', ingridient: [], step: [] },
@@ -39,19 +48,19 @@ export class RecipeService {
     );
   }
 
-  findRecipes(SearchString: string): Observable<Recipe[]> {
+  findRecipes(SearchString: string, offsetNumber: number): Observable<Recipe[]> {
     return of([
       { id: 1, image: "assets/Images/Strawberry.png", tags: [], fav: 10, like: 8, name: 'Клубничная панна-котта', description: 'Десерт, который невероятно легко и быстро готовится. Советую подавать его порционно в красивых бокалах, украсив взбитыми сливками, свежими ягодами и мятой.', time: '35 мин', person: '5 персон', ingridient: [], step: [] },
-      { id: 2, image: "assets/Images/Meat.png", tags: [], fav: 4, like: 7, name: 'Мясные фрикадельки', description: 'Мясные фрикадельки в томатном соусе - несложное и вкусное блюдо, которым можно порадовать своих близких.', time: '90 мин', person: '4 персоны', ingridient: [], step: [] },
+      /*{ id: 2, image: "assets/Images/Meat.png", tags: [], fav: 4, like: 7, name: 'Мясные фрикадельки', description: 'Мясные фрикадельки в томатном соусе - несложное и вкусное блюдо, которым можно порадовать своих близких.', time: '90 мин', person: '4 персоны', ingridient: [], step: [] },
       { id: 3, image: "assets/Images/Pancakes.png", tags: [], fav: 25, like: 7, name: 'Панкейки', description: 'Панкейки: меньше, чем блины, но больше, чем оладьи. Основное отличие — в тесте, оно должно быть воздушным, чтобы панкейки не растекались по сковородке...', time: '40 мин', person: '3 персоны', ingridient: [], step: [] },
-      { id: 4, image: "assets/Images/IceCream.png", tags: [], fav: 4, like: 7, name: 'Полезное Мороженое Без Сахара', description: 'Йогуртовое мороженое сочетает в себе нежный вкус и низкую калорийность, что будет особенно актуально для сладкоежек, соблюдающих диету.', time: '35 мин', person: '2 персоны', ingridient: [], step: [] },
+      { id: 4, image: "assets/Images/IceCream.png", tags: [], fav: 4, like: 7, name: 'Полезное Мороженое Без Сахара', description: 'Йогуртовое мороженое сочетает в себе нежный вкус и низкую калорийность, что будет особенно актуально для сладкоежек, соблюдающих диету.', time: '35 мин', person: '2 персоны', ingridient: [], step: [] },*/
     ]);
   }
 
-  getDailyRecipe(): Observable<Recipe[]> {
-    return of([
+  getDailyRecipe(): Observable<Recipe> {
+    return of(
       {id: 1, image: "assets/Images/Dish.png", tags: [], fav: 10, like: 356, name: 'Тыквенный супчик на кокосовом молоке', description: 'Если у вас осталась тыква, и вы не знаете что с ней сделать, то это решение для вас! Ароматный, согревающий суп-пюре на кокосовом молоке. Можно даже в Пост!', time: '35 мин', person: '5 персон', ingridient: [], step: [] },
-    ]);
+    );
   }
 
 

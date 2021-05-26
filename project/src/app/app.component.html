@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+<div class="page">
+    <div class="head-menu">
+      <div class="top-menu">
+        <p class="top-menu__logo">Recipes</p>
+        <a routerLink="/main" class="top-menu__button"><p>Главная</p></a>
+        <a routerLink="/list" class="top-menu__button"><p>Рецепты</p></a>
+        <a routerLink="/favs" class="top-menu__button"><p>Избранное</p></a>
+        <a href="" class="top-menu__button_registration"><p>Войти</p></a>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+<div class="footer">
+    <div class="footer__title">Recipes</div>
+    <img src="assets/Images/CopyMark.png" alt="" width="151" height="24" class="footer__copymark">
+</div>

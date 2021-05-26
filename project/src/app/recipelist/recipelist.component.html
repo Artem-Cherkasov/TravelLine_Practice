@@ -1,36 +1,28 @@
-<div class="page">
     <div class="page-intro">
-      <div class="top-menu">
-        <p class="top-menu__logo">Recipes</p>
-        <a routerLink="/main" class="top-menu__button"><p>Главная</p></a>
-        <a routerLink="/list" class="top-menu__button"><p>Рецепты</p></a>
-        <a routerLink="/favs" class="top-menu__button"><p>Избранное</p></a>
-        <a href="" class="top-menu__button_registration"><p>Войти</p></a>
-      </div>
       <div class="add-recipe">
         <div class="add-recipe__title">Рецепты</div>
         <div class="yellow-button">Добавить рецепт</div>
       </div>
       <div class="tag-buttons">
         <div class="sort">
-          <a *ngFor="let tag of Tags" href="" class="sort__button">
+          <span *ngFor="let tag of Tags" (click)="onTagClick(tag.name)" class="sort__button">
             <div class="button-img">              
               <img src="{{tag.icon}}" alt="Book" width="22" height="24" class="button-img__image">
             </div>
             <div class="button-text">
               <div class="button-text__bold">{{tag.name}}</div>            
             </div>
-          </a>
+          </span>
         </div>
       </div>              
     </div>
     <div class="page-search">
       <div class="page-search__title">Поиск рецепта</div>
-      <input class="input-field" placeholder="Название блюда...." [(ngModel)]="SearchString">
-      <a href="" class="page-search__button"><p>Поиск</p></a>
+      <input class="input-field" placeholder="Название блюда...." [(ngModel)]="SearchString" (change)="onSearchStringChange()">
+      <span (click)="onSearchStringChange()" class="page-search__button"><p>Поиск</p></span>
     </div>
     <div class="quick-tags">
-      <a *ngFor="let quicktag of QuickTags" href="" class="quick-tags__button">{{quicktag.name}}</a>
+      <span *ngFor="let quicktag of QuickTags" (click)="onTagClick(quicktag.name)" class="quick-tags__button">{{quicktag.name}}</span>
     </div>
     <a *ngFor="let recipe of Recipes" [routerLink]="['/recipe', recipe.id]" class="recipe">
       <img src="{{recipe.image}}" alt="" class="recipe__image">
@@ -75,5 +67,4 @@
       </div>
     </a>
     <div class="bottom-button"><div class="white-button" (click)="getRecipes()">Загрузить ещё</div></div>
-  </div>
 

@@ -16,14 +16,13 @@ export class MainpageComponent implements OnInit {
   Tags: Tag[] = [];
   QuickTags: Tag[] = [];
   SearchString: string = '';
-  DailyRecipe: Recipe[];
+  DailyRecipe: Recipe;
   
 
   constructor(
     private recipeService: RecipeService,
     private tagService: TagService
-    ) {
-   }
+    ) {}
 
    getTags(): void {
     this.tagService.getTags()
@@ -45,5 +44,4 @@ export class MainpageComponent implements OnInit {
     this.getQuickTags();
     this.getDailyRecipe();
   }
-
 }

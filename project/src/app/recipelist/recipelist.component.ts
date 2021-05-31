@@ -13,9 +13,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class RecipelistComponent implements OnInit {
   QuickTags: Tag[] = [];
-
   Recipes: Recipe[] = [];
-
   Tags: Tag[] = [];
   SearchString: string = '';
   Tag: string = '';

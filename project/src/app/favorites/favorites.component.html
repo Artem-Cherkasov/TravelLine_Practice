@@ -1,1 +1,46 @@
+<div class="scroll"></div>
+<div class="favourite__title">Избранное</div>
+<a *ngFor="let recipe of Recipes" [routerLink]="['/recipe', recipe.id]" class="recipe">
+    <img src="{{recipe.image}}" alt="" class="recipe__image">
+    <div class="recipe__content">
+      <div class="content-buttons">
+        <div class="yellow-tags">
+          <a *ngFor="let tag of recipe.tags.slice(0, 3)" href="" class="tag">{{tag.name}}</a>
+        </div>
+        <div class="fav-buttons">
+          <div class="fav-buttons__button">
+            <img src="assets/Images/Star.png" alt="" class="fav-buttons__button_img" width="20" height="19">
+            <div class="fav-buttons__button_text">{{recipe.fav}}</div>
+          </div>
+          <div class="fav-buttons__button">
+            <img src="assets/Images/Heart.png" alt="" class="fav-buttons__button_img" width="20" height="19">
+            <div class="fav-buttons__button_text">{{recipe.like}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        <div class="description__bold">{{recipe.name}}</div>
+        <div class="description__tiny">{{recipe.description}}</div>
+      </div>
+      <div class="bottom-content">
+        <div class="bottom-content__time-and-person">
+          <div class="time-and-person">
+            <img src="assets/Images/Clocks.png" alt="" class="time-img" width="48" height="56">
+            <div class="time-and-person_text">
+              <div class="time-and-person__text_bold">Время приготовления:</div>
+              <div class="time-and-person__text_tiny">{{recipe.time}}</div>
+            </div>
+          </div>
+          <div class="time-and-person">
+            <img src="assets/Images/People.png" alt="" class="person-img" width="59" height="38">
+            <div class="time-and-person_text">
+              <div class="time-and-person__text_bold">Рецепт на:</div>
+              <div class="time-and-person__text_tiny">{{recipe.person}}</div>
+            </div>              
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+
 

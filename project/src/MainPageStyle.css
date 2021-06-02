@@ -59,10 +59,12 @@
 
 .top-menu__button_registration 
 {
-	position: absolute;
+	display: flex;
+	flex-direction: row;
+	position: relative;
 	width: 60px;
 	height: 22px;
-	right: 200px;
+	left: 530px;
 	top: 48px;
 	text-decoration: none;
 	font-family: Montserrat;
@@ -406,7 +408,20 @@
 	margin-left: 918px;
 }
 
+.enter-img 
+{
+	display: flex;
+	flex-direction: row;
+	margin-top: -8px;
+	margin-right: -3px;
+}
 
+.enter-img__inner 
+{
+	position: relative;
+	top: 10px;
+	right: 27px;
+}
 
 
 

@@ -5,7 +5,13 @@
         <a routerLink="/main" class="top-menu__button"><p>Главная</p></a>
         <a routerLink="/list" class="top-menu__button"><p>Рецепты</p></a>
         <a routerLink="/favs" class="top-menu__button"><p>Избранное</p></a>
-        <a href="" class="top-menu__button_registration"><p>Войти</p></a>
+        <a href="" class="top-menu__button_registration">
+          <div class="enter-img">
+            <img src="assets/Images/Circle.png" alt="" class="enter-img__border" width="38" height="38">
+            <img src="assets/Images/Man.png" alt="" class="enter-img__inner" width="16" height="16">
+          </div>
+          <p>Войти</p>
+        </a>
       </div>
     </div>
     <router-outlet></router-outlet>
@@ -13,4 +19,47 @@
 <div class="footer">
     <div class="footer__title">Recipes</div>
     <img src="assets/Images/CopyMark.png" alt="" width="151" height="24" class="footer__copymark">
+</div>
+<div class="warning-form">
+  <img src="assets/Images/Cross.png" alt="" class="warning-form__cross">
+  <div class="warning-form__title">Войдите в профиль</div>
+  <div class="warning-form__description">Добавлять рецепты могут только зарегистрированные пользователи. </div>
+  <div class="warning-form__buttons">
+    <a href="" class="yellow-button">Войти</a>
+    <a href="" class="big-white-button">Регистрация</a>  
+  </div>
+</div>
+<div class="registration-form">
+  <img src="assets/Images/Cross.png" alt="" class="warning-form__cross">
+  <div class="registration-form__title"><div class="warning-form__title">Регистрация</div></div>
+  <input class="registration-form__field" placeholder="Имя">
+  <input class="registration-form__field" placeholder="Логин">
+  <div class="registration-form__password">
+    <input class="password-enter-and-repeat" placeholder="Пароль">
+    <input class="password-enter-and-repeat" placeholder="Повторите пароль">
+  </div>
+  <div class="password-tip"></div>
+  <div class="warning-form__buttons">
+    <a href="" class="yellow-button">Зарегистрироваться</a>
+    <a href="" class="big-white-button">Отмена</a>  
+  </div>
+  <a href="" class="login-link">
+    <div class="login-link__text">У меня уже есть аккаунт</div>
+    <div class="login-link__decoration"></div>
+  </a>
+</div>
+<div class="enter-form">
+  <img src="assets/Images/Cross.png" alt="" class="warning-form__cross">
+  <div class="registration-form__title"><div class="warning-form__title">Войти</div></div>
+  <input class="registration-form__field" placeholder="Логин">
+  <input class="registration-form__field" placeholder="Пароль">
+  <div class="password-tip"></div>
+  <div class="warning-form__buttons">
+    <a href="" class="yellow-button">Войти</a>
+    <a href="" class="big-white-button">Отмена</a>  
+  </div>
+  <a href="" class="login-link">
+    <div class="login-link__text">У меня еще нет аккаунта</div>
+    <div class="login-link__decoration"></div>
+  </a>
 </div>

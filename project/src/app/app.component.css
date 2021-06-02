@@ -1,0 +1,199 @@
+.warning-form 
+{
+    margin: auto;
+    border: 1px solid black;
+    width: 700px;
+    height: 336px;
+    background: #FFFFFF;
+    box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+    border-radius: 24px;
+}
+
+.warning-form__cross 
+{
+    margin-top: 27px;
+    margin-left: 661px;
+}
+
+.warning-form__title 
+{
+    margin-top: 19px;
+    margin-left: 60px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #25292D;    
+}
+
+.warning-form__description 
+{
+    margin-top: 30px;
+    margin-left: 60px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    font-feature-settings: 'case' on;
+    color: #4A525A;    
+}
+
+.warning-form__buttons 
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+.big-white-button 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 278px;
+    height: 60px;
+    border: 1px solid #FDB100;
+    box-sizing: border-box;
+    border-radius: 16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #FDB100;        
+}
+
+.big-white-button:hover 
+{
+    background-color: #FDB100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 278px;
+    height: 60px;
+    border: 1px solid #FDB100;
+    box-sizing: border-box;
+    border-radius: 16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;        
+}
+
+.registration-form 
+{
+    margin: auto;
+    border: 1px solid black;
+    width: 700px;
+    height: 563px;    
+    background: #FFFFFF;
+    box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+    border-radius: 24px;    
+}
+
+.registration-form__title 
+{
+    margin-bottom: 47px;
+}
+
+.registration-form__field 
+{
+    padding: 26px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    width: 580px;
+    height: 50px;
+    border: 1px solid rgba(145, 150, 161, 0.4);
+    box-sizing: border-box;
+    border-radius: 16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;    
+    color: rgba(37, 41, 45, 0.5);    
+}
+
+.registration-form__password 
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.password-enter-and-repeat 
+{
+    padding: 28px;
+    margin-right: 24px;
+    width: 278px;
+    height: 50px;
+    border: 1px solid rgba(145, 150, 161, 0.4);
+    box-sizing: border-box;
+    border-radius: 16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(37, 41, 45, 0.5);
+}
+
+.password-enter-and-repeat__text 
+{
+    margin-top: 11px;
+    margin-left: 28px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(37, 41, 45, 0.5);
+}
+
+.login-link 
+{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin-top: 40px;
+    margin-left: 231px;
+}
+
+.login-link__text 
+{
+    margin-bottom: 2px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FDB100;    
+}
+
+.login-link__decoration 
+{
+    width: 237px;
+    height: 0px;
+    border: 1px dashed #FDB100;
+}
+
+.enter-form 
+{
+    margin: auto;
+    border: 1px solid black;
+    width: 700px;
+    height: 479px;    
+    background: #FFFFFF;
+    box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+    border-radius: 24px;    
+}

@@ -11,6 +11,8 @@
 {
     width: 1440px;
     margin: 0px auto;
+	background-image: url('assets/Images/wave-2.png');
+	background-repeat: no-repeat;
 }
 
 .head-menu 
@@ -110,6 +112,7 @@
 
 .yellow-button 
 {
+	cursor: pointer;
 	display: flex;
 	flex-direction: row;
 	width: 278px;
@@ -172,6 +175,7 @@
 
 .white-button:hover 
 {
+	cursor: pointer;
 	width: 216px;
  	height: 60px;
  	border: 1px solid #FDB100;
@@ -422,9 +426,6 @@
 	top: 10px;
 	right: 27px;
 }
-
-
-
 
 
 

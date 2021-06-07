@@ -27,7 +27,8 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
               "src/MainPageStyle.css",
-              "src/RecipeListStyle.css"
+              "src/RecipeListStyle.css",
+              "src/Recipe.css"
             ],
             "scripts": []
           },

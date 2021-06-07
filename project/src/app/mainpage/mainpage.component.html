@@ -3,13 +3,13 @@
         <div class="intro-content__bold">Готовь и делись рецептами</div>
         <div class="intro-content__tiny">Никаких кулинарных книг и блокнотов! Храни все любимые рецепты в одном месте</div>
         <div class="intro-content__buttons">
-          <a href="" class="yellow-button">
+          <a class="yellow-button" (click)="showWarningPopup()">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="plus">
               <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z"/>
             </svg>              
             <p>Добавить рецепт</p>
           </a>
-          <a href="" class="white-button"><p>Войти</p></a>
+          <a class="white-button" (click)="showLoginPopup()"><p>Войти</p></a>
         </div>      
       </div>
     </div>

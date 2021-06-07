@@ -1,6 +1,6 @@
 <div class="scroll"></div>
 <div class="favourite__title">Избранное</div>
-<a *ngFor="let recipe of Recipes" [routerLink]="['/recipe', recipe.id]" class="recipe">
+<a *ngFor="let recipe of Recipes" [routerLink]="['/recipe', recipe.id]" class="fav__recipe">
     <img src="{{recipe.image}}" alt="" class="recipe__image">
     <div class="recipe__content">
       <div class="content-buttons">

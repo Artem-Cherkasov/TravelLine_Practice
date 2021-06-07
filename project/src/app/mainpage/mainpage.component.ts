@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from 'src/recipe';
 import { Tag } from 'src/tag';
+import { PopupService } from '../popup.service';
 import { RecipeService } from '../recipe.service';
 import { TagService } from '../tag.service';
 
@@ -17,11 +18,12 @@ export class MainpageComponent implements OnInit {
   QuickTags: Tag[] = [];
   SearchString: string = '';
   DailyRecipe: Recipe;
-  
+ 
 
   constructor(
     private recipeService: RecipeService,
-    private tagService: TagService
+    private tagService: TagService,
+    private popupService: PopupService
     ) {}
 
    getTags(): void {
@@ -44,4 +46,19 @@ export class MainpageComponent implements OnInit {
     this.getQuickTags();
     this.getDailyRecipe();
   }
+
+  showLoginPopup(): void{
+    this.popupService.showLogin(true);
+    console.log("asdsadsa");
+  }
+
+  showWarningPopup(): void{
+    this.popupService.showWarning(true);
+    console.log("asdsadsa");
+  }
+  
+  showRegistrationPopup(): void{
+    this.popupService.showRegistration(true);
+    console.log("asdsadsa");
+  }  
 }

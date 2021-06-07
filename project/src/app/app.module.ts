@@ -9,6 +9,7 @@ import { RecipelistComponent } from './recipelist/recipelist.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     MainpageComponent,
     RecipelistComponent,
     FavoritesComponent,
-    RecipeComponent
+    RecipeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,7 @@ import { FormsModule } from '@angular/forms';
       { path: 'recipe/:id', component: RecipeComponent },
       { path: 'list/:searchString', component: RecipelistComponent },
       { path: 'listByTag/:tag', component: RecipelistComponent },
-
+      { path: 'profile', component: ProfileComponent },
     ])
   ],
   exports: [ RouterModule],

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.profile-form 
+{
+	margin-left: 120px;
+	width: 1200px;
+	height: 311px;
+	border: 1px solid black;
+	background: #FFFFFF;
+	box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+	border-radius: 24px;	
+}
+
+.save-button 
+{
+	margin-left: 1158px;
+	margin-top: 22px;
+	margin-bottom: 15px;
+}
+
+.profile-fields 
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.profile-fields__small-fields 
+{
+	margin-left: 73px;
+}
+
+.small-field 
+{
+	margin-bottom: 20px;
+	width: 542px;
+	height: 50px;
+	border: 1px solid rgba(145, 150, 161, 0.4);
+	box-sizing: border-box;
+	border-radius: 16px;
+}
+
+.password-field 
+{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
+	width: 542px;
+	height: 50px;
+	border: 1px solid rgba(145, 150, 161, 0.4);
+	box-sizing: border-box;
+	border-radius: 16px;
+}
+
+.small-field__tiny-text 
+{
+	margin-left: 25px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 28px;
+	color: rgba(37, 41, 45, 0.5);
+}
+
+.small-field__bold-text 
+{
+	margin-top: -10px;
+	margin-left: 25px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 28px;
+	color: #4A525A;
+}
+
+.password-text 
+{
+	margin-left: 28px;
+	margin-top: 11px;
+	margin-right: 415px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 28px;
+	color: rgba(37, 41, 45, 0.5);
+}
+
+.show-password 
+{
+	margin-top: 15px;
+}
+
+.profile-form__about-field 
+{
+	margin-left: 40px;
+	width: 472px;
+	height: 191px;
+	border: 1px solid rgba(145, 150, 161, 0.4);
+	box-sizing: border-box;
+	border-radius: 16px;
+}
+
+.about-field__text 
+{
+	margin-left: 33px;
+	margin-top: 11px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 28px;
+	color: rgba(37, 41, 45, 0.5);	
+}
+
+.statistics 
+{
+	margin-left: 120px;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+}
+
+.statistics__block 
+{
+	display: flex;
+	flex-direction: row;
+	margin-right: 32px;
+	border: 1px solid black;
+	width: 378px;
+	height: 151.18px;
+	background: #FFFFFF;
+	box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+	border-radius: 24px;
+}
+
+.statistics__title-n-img 
+{
+	display: flex;
+	flex-direction: column;
+	margin-left: 22.13px;
+}
+
+.block-img 
+{
+	width: 46px;
+	height: 47px;
+	background: #FFEFCC;
+	border-radius: 12px;
+	margin-top: 25px;
+	margin-bottom: 28px;	
+}
+
+.block-img__image 
+{
+	margin-top: 13px;
+	margin-left: 12px;	
+}
+
+.title-n-img__title 
+{
+	width: 177px;
+	margin-top: -10px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 30px;
+	color: #25292D;	
+}
+
+.statistics__count 
+{
+	margin-top: -3px;
+	margin-left: 45px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 107px;
+	line-height: 30px;
+	display: flex;
+	align-items: center;
+	text-align: right;
+	color: #FDB100;
+}
+
+.my-recipes__title 
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-left: 123px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	color: #25292D;	
+}
+
+.my-profile__recipe 
+{
+	width: 1200px;
+	margin-left: 120px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	border: 1px solid black;
+	border-radius: 72px 0px;
+}

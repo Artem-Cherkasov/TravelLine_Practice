@@ -8,7 +8,7 @@
 }
 
 .page
-{
+{		
     width: 1440px;
     margin: 0px auto;
 	background-image: url('assets/Images/wave-2.png');
@@ -75,6 +75,48 @@
 	font-size: 18px;
 	line-height: 22px;
 	color: #FDB100;
+}
+
+.top-menu__user 
+{
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	width: 100px;
+	height: 22px;
+	left: 390px;
+	top: 48px;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FDB100;
+}
+
+.profile__link 
+{
+	display: flex;
+	flex-direction: row;
+	text-decoration: none;
+}
+
+.user__text 
+{
+	margin-right: 5px;
+}
+
+.separator 
+{
+	margin-left: 25px;
+}
+
+.exit 
+{
+	cursor: pointer;
+	margin-top: 2px;
+	margin-left: 27px;
 }
 
 .intro-content__bold 

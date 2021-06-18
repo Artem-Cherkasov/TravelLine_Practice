@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PopupService } from 'src/app/popup.service';
+import { AccountmanagementService } from './accountmanagement.service';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,9 @@ export class AppComponent {
   showLoginPopup: boolean = false;
   showWarningPopup: boolean = false;
   showRegistrationPopup: boolean = false;
+  LoginName: string = '';
 
-  constructor (private popupService: PopupService)
+  constructor (private popupService: PopupService, private accountmanagementService: AccountmanagementService)
   {
     popupService.showLoginEmitted$.subscribe(
       text => {
@@ -57,5 +59,18 @@ export class AppComponent {
 
   hideRegistration():void{    
     this.showRegistrationPopup = false;
+  }
+
+  isLoggedIn(): boolean {
+    return this.accountmanagementService.isAutorized();
+  }
+
+  login(): void{
+    this.accountmanagementService.login(this.LoginName);
+    this.hideLogin();
+  }
+  
+  logout(): void {
+    this.accountmanagementService.logout();
   }
 }

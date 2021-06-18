@@ -5,16 +5,25 @@
         <a routerLink="/main" class="top-menu__button"><p>Главная</p></a>
         <a routerLink="/list" class="top-menu__button"><p>Рецепты</p></a>
         <a routerLink="/favs" class="top-menu__button"><p>Избранное</p></a>
-        <a class="top-menu__button_registration" (click)="showLogin(true)">
+        <a *ngIf="!isLoggedIn()" class="top-menu__button_registration" (click)="showLogin(true)">
           <div class="enter-img">
             <img src="assets/Images/Circle.png" alt="" class="enter-img__border" width="38" height="38">
             <img src="assets/Images/Man.png" alt="" class="enter-img__inner" width="16" height="16">
           </div>
           <p>Войти</p>
         </a>
+        <a routerLink="/profile" *ngIf="isLoggedIn()" class="top-menu__user" >
+          <div class="enter-img">
+            <img src="assets/Images/Circle.png" alt="" class="enter-img__border" width="38" height="38">
+            <img src="assets/Images/Man.png" alt="" class="enter-img__inner" width="16" height="16">
+          </div>
+          <div class="user__text">Привет, </div>
+          <div class="">{{LoginName}}</div>  
+          <img src="assets/Images/Separator.png" alt="" class="separator" width="1">
+          <img src="assets/Images/Exit.png" alt="" class="exit" width="18" height="18" (click)="logout()">
+        </a>
       </div>
     </div>
-    <div class="clear"></div>
     <router-outlet></router-outlet>
 </div>
 <div class="footer">
@@ -28,7 +37,7 @@
     <div class="warning-form__description">Добавлять рецепты могут только зарегистрированные пользователи. </div>
     <div class="warning-form__buttons">
       <a class="yellow-button">Войти</a>
-      <a class="big-white-button" (click)="showRegistrationPopup()">Регистрация</a>  
+      <a class="big-white-button" (click)="showRegistration()">Регистрация</a>  
     </div>
   </div>  
 </div>
@@ -55,11 +64,11 @@
   <div class="enter-form">
     <img src="assets/Images/Cross.png" alt="" class="warning-form__cross" (click)="hideLogin()"> 
     <div class="registration-form__title"><div class="warning-form__title">Войти</div></div>
-    <input class="registration-form__field" placeholder="Логин">
+    <input class="registration-form__field" placeholder="Логин" [(ngModel)]="LoginName">
     <input class="registration-form__field" placeholder="Пароль">
     <div class="password-tip"></div>
     <div class="warning-form__buttons">
-      <a class="yellow-button" (click)="hideLogin()">Войти</a>
+      <a class="yellow-button" (click)="login()">Войти</a>
       <a class="big-white-button" (click)="hideLogin()">Отмена</a>  
     </div>
     <a href="" class="login-link">
@@ -68,4 +77,3 @@
     </a>
   </div>
 </div>
-<a routerLink="/profile">тык</a>

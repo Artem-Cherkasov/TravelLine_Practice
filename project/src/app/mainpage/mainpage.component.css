@@ -73,6 +73,36 @@
 	color: #FDB100;
 }
 
+.top-menu__user 
+{
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	width: 300px;
+	height: 22px;
+	left: 370px;
+	top: 48px;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FDB100;
+}
+
+.separator 
+{
+	margin-left: 25px;
+}
+
+.exit 
+{
+	cursor: pointer;
+	margin-top: 2px;
+	margin-left: 27px;
+}
+
 .intro-content__bold 
 {
 	margin-top: 139px;

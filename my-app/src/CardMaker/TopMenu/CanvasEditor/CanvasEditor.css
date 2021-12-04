@@ -1,0 +1,32 @@
+.canvaseditor
+{
+    height: 130px;
+    width: 155px;
+    background-color: #99ff99;	
+}
+
+.canvaseditor-size
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.mult
+{
+    font-weight: 500;
+    margin-left: 7px;
+    margin-top: 52px;
+}
+
+.canvaseditor-bottom
+{
+    background-color: #99ff99;	
+	margin-top: 31px;
+	border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.canvaseditor-description
+{
+    margin-left: 55px;
+}

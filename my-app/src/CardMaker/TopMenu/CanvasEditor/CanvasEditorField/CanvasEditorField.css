@@ -1,0 +1,10 @@
+.canvaseditorfield
+{
+    height: 21px;
+    width: 50px;
+    margin-left: 7px;
+    margin-top: 50px;
+    background-color: #ccffcc; 
+    border: 2px solid black;
+    outline: none;
+}

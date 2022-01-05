@@ -1,4 +1,4 @@
-import "./StyleButton.css"
+import styles from "./StyleButton.module.css"
 
 type ButtonProps = {
     src: string,
@@ -7,7 +7,7 @@ type ButtonProps = {
 
 function StyleButton(props: ButtonProps) {
     return(
-        <div className="stylebutton"><div className="stylebutton__text">{props.src}</div></div>
+        <div className={styles.stylebutton}><div className={styles.text}>{props.src}</div></div>
     )
 }
 

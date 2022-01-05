@@ -1,15 +1,19 @@
-import './CanvasEditor.css'
+import { useRef } from 'react';
+import styles from './CanvasEditor.module.css'
 import CanvasEditorField from './CanvasEditorField/CanvasEditorField';
+
+const inputWidth = useRef<HTMLInputElement>(null);
+const inputHeight = useRef<HTMLInputElement>(null);
 
 function CanvasEditor() {
     return(
-        <div className="canvaseditor">
-            <div className="canvaseditor-size">
-                <CanvasEditorField fieldName={'Высота'} />
-                <div className="mult">X</div>
-                <CanvasEditorField fieldName={'Ширина'} />            
+        <div className={styles.canvaseditor}>
+            <div className={styles.canvaseditorsize}>
+                <CanvasEditorField fieldName={'Высота'} defaultValue={800}  />
+                <div className={styles.mult}>X</div>
+                <CanvasEditorField fieldName={'Ширина'} defaultValue={600} />            
             </div>
-            <div className="canvaseditor-bottom"><div className="canvaseditor-description">Холст</div></div>
+            <div className={styles.canvaseditorbottom}><div className={styles.canvaseditordescription}>Холст</div></div>
         </div>
     )
 }

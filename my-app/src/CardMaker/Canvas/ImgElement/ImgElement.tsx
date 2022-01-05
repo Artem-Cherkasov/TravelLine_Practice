@@ -1,5 +1,5 @@
 import { CanvasElement } from '../../../CardMakerTypes'
-import './ImgElement.css'
+import styles from './ImgElement.module.css'
 
 type ImgElementProps = {
     imgElement: CanvasElement,
@@ -15,7 +15,7 @@ function ImgElement(props: ImgElementProps) {
     }
 
     return(
-        <img src={style.src} alt="" className="element" style={style}/>
+        <img src={style.src} alt="" className={styles.element} style={style}/>
     )
 }
 

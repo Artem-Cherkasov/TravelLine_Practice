@@ -1,4 +1,4 @@
-import './ArtObjectSizeField.css'
+import styles from './ArtObjectSizeField.module.css'
 
 type ArtObjectSizeFieldProps = {
     fieldName: string,
@@ -6,7 +6,7 @@ type ArtObjectSizeFieldProps = {
 
 function ArtObjectSizeField(props: ArtObjectSizeFieldProps) {
     return(
-        <input className="artobjectsizefield" placeholder={props.fieldName}></input>
+        <input className={styles.artobjectsizefield} placeholder={props.fieldName}></input>
     )
 }
 

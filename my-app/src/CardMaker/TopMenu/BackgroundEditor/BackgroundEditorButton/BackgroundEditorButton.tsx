@@ -1,5 +1,4 @@
-import { type } from 'os'
-import './BackgroundEditorButton.css'
+import styles from './BackgroundEditorButton.module.css'
 
 type BackgroundEditorButtonProps = {
     buttonName: string,
@@ -7,7 +6,7 @@ type BackgroundEditorButtonProps = {
 
 function BackgroundEditorButton(props: BackgroundEditorButtonProps) {
     return(
-        <button className="backgroundeditorbutton">{props.buttonName}</button>
+        <button className={styles.backgroundeditorbutton}>{props.buttonName}</button>
     )
 }
 

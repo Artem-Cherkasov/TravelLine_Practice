@@ -1,4 +1,4 @@
-import './ImgSizeField.css'
+import styles from './ImgSizeField.module.css'
 
 type ImgSizeFieldProps = {
     size: string,
@@ -6,7 +6,7 @@ type ImgSizeFieldProps = {
 
 function ImgSizeField(props: ImgSizeFieldProps) {
     return (
-        <input className="imgsizefield" placeholder={props.size}></input>
+        <input className={styles.imgsizefield} placeholder={props.size}></input>
     )
 }
 

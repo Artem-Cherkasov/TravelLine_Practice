@@ -1,20 +1,20 @@
-import "./Canvas.css"
-import { CanvasUnit, TextUnit, Img, ArtObj, CanvasElement} from "../../CardMakerTypes"
+import styles from "./Canvas.module.css"
+import { CanvasUnit, TextUnit, Img, ArtObj, CanvasElement, CardMakerType} from "../../CardMakerTypes"
 import { ReactElement } from "react";
 import TextElement from "./TextElement/TextElement";
 import ImgElement from "./ImgElement/ImgElement";
 import ArtObjElement from "./ArtObjElement/ArtObjElement";
 
 type CanvasProps = {
-    canvas: CanvasUnit,
+    cardMaker: CardMakerType,
 }
 
 function Canvas(props: CanvasProps) {
 
     let background: string = "#ffffff"
 
-    const color: string | null = props.canvas.background.color;
-    const src: string | null = props.canvas.background.src;
+    const color: string | null = props.cardMaker.canvas.background.color;
+    const src: string | null = props.cardMaker.canvas.background.src;
     if (color) {
         background = color
     } else if (src) {
@@ -22,13 +22,13 @@ function Canvas(props: CanvasProps) {
     }
 
     const style = {
-        width: props.canvas.width,
-        height: props.canvas.height,
+        width: props.cardMaker.canvas.width,
+        height: props.cardMaker.canvas.height,
         background: background,    
     }
 
     let elementList: ReactElement[] = [];
-    props.canvas.elementList.forEach(element =>{
+    props.cardMaker.canvas.elementList.forEach(element =>{
         switch(element.type) {
             case 'text':
                 elementList.push(<TextElement textElement={element as CanvasElement} />);
@@ -42,9 +42,16 @@ function Canvas(props: CanvasProps) {
         } 
     });
 
+    const filterstyle ={
+        width: props.cardMaker.canvas.width,
+        height: props.cardMaker.canvas.height,        
+        background: props.cardMaker.canvas.currentFilter.color,
+        opacity: props.cardMaker.canvas.currentFilter.transparency,
+    }
+
     return(
-        <div className="canvas" style={style} id="canvas">
-            {elementList}
+        <div className={styles.canvas} style={style} id="canvas">                        
+            <div className={styles.element}>{elementList}</div>
         </div>
     )
 }

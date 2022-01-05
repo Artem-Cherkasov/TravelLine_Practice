@@ -1,4 +1,4 @@
-export type CardMaker = {
+export type CardMakerType = {
     readonly canvas: CanvasUnit,
     readonly history: ActionHistory,
     readonly templates: Template[],

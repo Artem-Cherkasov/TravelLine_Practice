@@ -1,5 +1,4 @@
-import { type } from 'os'
-import './ElementEditorButton.css'
+import styles from './ElementEditorButton.module.css'
 
 type ElementEditorButtonProps = {
     buttonName: string,
@@ -7,7 +6,7 @@ type ElementEditorButtonProps = {
 
 function ElementEditorButton(props: ElementEditorButtonProps) {
     return(
-        <button className='elementeditorbutton'><div className="elementeditorbutton__text">{props.buttonName}</div></button>
+        <button className={styles.elementeditorbutton}>{props.buttonName}</button>
     )
 }
 

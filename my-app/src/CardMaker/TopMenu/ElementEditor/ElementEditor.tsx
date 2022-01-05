@@ -1,12 +1,12 @@
-import './ElementEditor.css'
+import styles from './ElementEditor.module.css'
 import ElementEditorButton from './ElementEditorButton/ElementEditorButton';
 
 function ElementEditor() {
     return(
-        <div className="elementeditor">
+        <div className={styles.elementeditor}>
             <ElementEditorButton buttonName={'Выделить элементы'} />
             <ElementEditorButton buttonName={'Удалить выбраные'} />
-            <div className="elementeditor-bottom"><div className="elementeditor-description">Выделить</div></div>
+            <div className={styles.elementeditorbottom}><div className={styles.elementeditordescription}>Выделить</div></div>
         </div>
     )
 }

@@ -1,8 +1,8 @@
-import './ArtObjectListButton.css'
+import styles from './ArtObjectListButton.module.css'
 
 function ArtObjectListButton() {
     return(
-        <button className='artobjectlistbutton'>Добавить арт-объект</button>
+        <button className={styles.artobjectlistbutton}>Добавить арт-объект</button>
     )
 }
 

@@ -1,8 +1,8 @@
-import "./InsertImgButton.css"
+import styles from "./InsertImgButton.module.css"
 
 function InsertImgButton() {
     return(
-        <button className="insertimgbutton"><div className="insertimgbutton-text">Вставить</div></button>
+        <button className={styles.insertimgbutton}>Вставить</button>
     )
 }
 

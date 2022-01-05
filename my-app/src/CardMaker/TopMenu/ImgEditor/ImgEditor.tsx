@@ -1,4 +1,4 @@
-import "./ImgEditor.css"
+import styles from "./ImgEditor.module.css"
 import ImgSizeField from "./ImgSizeField/ImgSizeField";
 import InsertImgButton from "./InsertImgButton/InsertImgButton";
 import InsertingFromPC from "./InsertingFromPC/InsertingFromPC";
@@ -6,18 +6,18 @@ import SrcInsertField from "./SrcInsertField/SrcInsertField";
 
 function ImgEditor() {
     return (
-        <div className="imgeditor">
-            <div className="imgeditor-top">
+        <div className={styles.imgeditor}>
+            <div className={styles.imgeditortop}>
                 <SrcInsertField />
                 <InsertImgButton />
             </div>
-            <div className="imgeditor-sizefield">
+            <div className={styles.imgeditorsizefield}>
                 <ImgSizeField size={"Высота"} /> 
-                <div className="multiplication">X</div>
+                <div className={styles.multiplication}>X</div>
                 <ImgSizeField size={"Ширина"} />
                 <InsertingFromPC />
             </div>
-            <div className="imgeditor-bottom"><div className="imgeditor-description">Изображения</div></div>
+            <div className={styles.imgeditorbottom}><div className={styles.imgeditordescription}>Изображения</div></div>
         </div>        
     )
 }

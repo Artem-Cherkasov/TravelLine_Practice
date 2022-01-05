@@ -1,17 +1,17 @@
-import './ArtObjectEditor.css'
+import styles from './ArtObjectEditor.module.css'
 import ArtObjectListButton from './ArtObjectListButton/ArtObjectListButton';
 import ArtObjectSizeField from './ArtObjectSizeField/ArtObjectSizeField';
 
 function ArtObjectEditor() {
     return(
-        <div className="artobjecteditor">
+        <div className={styles.artobjecteditor}>
             <ArtObjectListButton />
-            <div className="artobjecteditor-sizefield">
+            <div className={styles.artobjecteditorsizefield}>
                 <ArtObjectSizeField fieldName={'Высота'} />
-                <div className="mul">X</div>
+                <div className={styles.mul}>X</div>
                 <ArtObjectSizeField fieldName={'Ширина'} />
             </div>            
-            <div className="artobjecteditor-bottom"><div className="artobjecteditor-description">Арт-объекты</div></div>
+            <div className={styles.artobjecteditorbottom}><div className={styles.artobjecteditordescription}>Арт-объекты</div></div>
         </div>
     )
 }

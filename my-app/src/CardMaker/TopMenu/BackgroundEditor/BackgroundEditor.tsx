@@ -1,12 +1,13 @@
-import './BackgroundEditor.css'
+import styles from './BackgroundEditor.module.css'
 import BackgroundEditorButton from './BackgroundEditorButton/BackgroundEditorButton';
+import BackgroundEditorInput from './BackgroundEditorInput/BackgroundEditorInput';
 
 function BackgroundEditor() {
     return(
-        <div className="backgroundeditor">
-            <BackgroundEditorButton buttonName={'Цвет фона'} />
+        <div className={styles.backgroundeditor}>
+            <BackgroundEditorInput />
             <BackgroundEditorButton buttonName={'Фон с устр-ва'} />
-            <div className="backgroundeditor-bottom"><div className="backgroundeditor-description">Фон</div></div>
+            <div className={styles.backgroundeditorbottom}><div className={styles.backgroundeditordescription}>Фон</div></div>
         </div>
     )
 }

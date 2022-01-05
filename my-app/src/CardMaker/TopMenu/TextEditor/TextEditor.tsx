@@ -1,21 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AddTextButton from './AddTextButton/AddTextButton';
 import StyleButton from './StyleButton/StyleButton';
-import './TextEditor.css'
+import styles from './TextEditor.module.css'
 
 function TextEditor() {
     return(
-        <div className='text-editor'>
-            <div className='font-field'><div className='field-text'>Arial</div></div>
-            <div className='texteditor-middle'>
-               <div className='size-field'><div className="field-text">12</div></div> 
-               <div className="text-stylebuttons">
+        <div className={styles.texteditor}>
+            <div className={styles.texteditortop}>
+                <div className={styles.fontfield}>Arial</div>
+                <AddTextButton />
+            </div>
+            <div className={styles.texteditormiddle}>
+               <div className={styles.sizefield}>12</div> 
+               <div className={styles.textstylebuttons}>
                    <StyleButton src='B' alt='bold'/>
                    <StyleButton src='I' alt='italic'/>
                    <StyleButton src='U' alt='underlined'/>
                 </div>          
             </div>
-            <div className="texteditor-bottom"><div className="texteditor-description">Текст</div></div>
+            <div className={styles.texteditorbottom}><div className={styles.texteditordescription}>Текст</div></div>
         </div>  
     );
 }

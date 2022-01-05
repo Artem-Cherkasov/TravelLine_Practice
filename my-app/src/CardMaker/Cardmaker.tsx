@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Canvas from './Canvas/Canvas';
-import './CardMaker.css'
+import styles from './CardMaker.module.css'
 import TopMenu from './TopMenu/TopMenu';
 import {testCanvas} from '../TestData';
+import { CardMakerType } from '../CardMakerTypes';
 
-function CardMaker() {
+type CardMakerProps = {
+    cardMaker: CardMakerType,
+}
+
+function CardMaker(props: CardMakerProps) {
     return(
-        <div className='page'>
+        <div className={styles.page}>
             <TopMenu />
-            <Canvas canvas={testCanvas}/>
+            <div className={styles.container}><Canvas cardMaker={props.cardMaker}/></div>            
         </div>    
     );
 }
